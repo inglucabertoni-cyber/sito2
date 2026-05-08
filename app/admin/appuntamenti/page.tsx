@@ -4,6 +4,10 @@ import { prisma } from "@/lib/prisma";
 import { confirmAppointment, cancelAppointment } from "@/app/actions/appointments";
 import { LogoFull } from "@/app/components/Logo";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+import type { AppuntamentoPin } from "@/app/components/MappaAppuntamenti";
+
+const MappaAppuntamenti = dynamic(() => import("@/app/components/MappaAppuntamenti"), { ssr: false });
 
 const SERVICE_LABEL: Record<string, string> = {
   ANALISI_IMMOBILE: "Analisi immobile",
@@ -67,6 +71,20 @@ export default async function AdminAppuntamentiPage() {
             <p className="text-sm text-gray-500 mt-1">Annullati</p>
           </div>
         </div>
+
+        {appuntamenti.length > 0 && (
+          <div className="mb-8">
+            <MappaAppuntamenti appuntamenti={appuntamenti.map((a): AppuntamentoPin => ({
+              id: a.id,
+              clientName: a.client.name,
+              serviceType: a.serviceType,
+              city: a.city,
+              address: a.address,
+              confirmedDate: a.confirmedDate,
+              status: a.status,
+            }))} />
+          </div>
+        )}
 
         {inAttesa.length > 0 && (
           <>

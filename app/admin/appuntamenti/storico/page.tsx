@@ -3,6 +3,10 @@ import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { LogoFull } from "@/app/components/Logo";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+import type { AppuntamentoPin } from "@/app/components/MappaAppuntamenti";
+
+const MappaAppuntamenti = dynamic(() => import("@/app/components/MappaAppuntamenti"), { ssr: false });
 
 const SERVICE_LABEL: Record<string, string> = {
   ANALISI_IMMOBILE: "Analisi immobile",
@@ -62,7 +66,21 @@ export default async function StoricoAppuntamentiPage() {
       </header>
 
       <main className="max-w-4xl mx-auto px-4 py-8">
-        <h2 className="text-2xl font-black text-[#0F2540] mb-8">Storico appuntamenti</h2>
+        <h2 className="text-2xl font-black text-[#0F2540] mb-6">Storico appuntamenti</h2>
+
+        {appuntamenti.length > 0 && (
+          <div className="mb-8">
+            <MappaAppuntamenti appuntamenti={appuntamenti.map((a): AppuntamentoPin => ({
+              id: a.id,
+              clientName: a.client.name,
+              serviceType: a.serviceType,
+              city: a.city,
+              address: a.address,
+              confirmedDate: a.confirmedDate,
+              status: a.status,
+            }))} />
+          </div>
+        )}
 
         {sections.map(({ title, items, emptyMsg }) => (
           <section key={title} className="mb-10">

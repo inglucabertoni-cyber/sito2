@@ -38,34 +38,43 @@ export default function ChiSiamoPage() {
       <section className="max-w-4xl mx-auto px-4 py-16 sm:py-20">
         <div className="grid sm:grid-cols-2 gap-12 items-start">
           <div>
-            <div className="inline-block bg-amber-50 border border-amber-100 text-amber-700 text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4">
-              Co-fondatrice
+            <div className="inline-block bg-[#F59E0B] text-white text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4">
+              Fondatrice &amp; Responsabile
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-[#0F2540] mb-1">Giuliana</h2>
-            <h3 className="text-xl font-semibold text-[#F59E0B] mb-6">Roccaro</h3>
+            <h3 className="text-xl font-semibold text-[#F59E0B] mb-2">Roccaro</h3>
+            <p className="text-sm font-semibold text-gray-400 mb-6 italic">
+              Guida e coordina ogni progetto — dal primo contatto alla consegna finale.
+            </p>
 
             <div className="space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed">
               <p>
-                Da oltre <strong className="text-[#0F2540]">20 anni</strong> Giuliana è uno dei punti di riferimento
+                Giuliana è la mente e il cuore di <strong className="text-[#0F2540]">help for house</strong>.
+                È lei che accoglie ogni cliente, ascolta le esigenze, costruisce la strategia
+                e coordina tutte le fasi del progetto — garantendo continuità, coerenza e attenzione
+                in ogni passaggio.
+              </p>
+              <p>
+                Da oltre <strong className="text-[#0F2540]">20 anni</strong> è uno dei punti di riferimento
                 della valutazione immobiliare milanese. Collabora con <strong className="text-[#0F2540]">CRIF</strong> e
-                ha firmato più di <strong className="text-[#0F2540]">20.000 perizie</strong> — un numero che racconta
-                una carriera costruita su rigore, competenza e fiducia guadagnata nel tempo.
+                ha firmato più di <strong className="text-[#0F2540]">20.000 perizie</strong> — una carriera
+                costruita su rigore, competenza e fiducia guadagnata nel tempo.
               </p>
               <p>
                 Il Tribunale di Milano l'ha nominata <strong className="text-[#0F2540]">CTU (Consulente Tecnico d'Ufficio)</strong>,
-                riconoscimento che testimonia l'autorevolezza e la terzietà del suo giudizio professionale.
+                riconoscimento che ne certifica autorevolezza e terzietà di giudizio.
               </p>
               <p>
                 Ma Giuliana non è solo numeri e perizie. <strong className="text-[#0F2540]">Ama le case</strong> —
-                davvero, con quella passione viscerale di chi entra in un appartamento e lo vede già vissuto,
-                trasformato, migliorato. A questa sensibilità aggiunge una profonda passione per
+                con quella passione di chi entra in un appartamento e lo vede già vissuto e trasformato.
+                A questa sensibilità aggiunge una profonda passione per
                 <strong className="text-[#0F2540]"> l'arredo e il design degli spazi</strong>: ogni ambiente
                 racconta chi lo abita, e lei sa leggere quella storia meglio di chiunque altro.
               </p>
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              {["20.000+ perizie", "CTU Tribunale di Milano", "Collaboratrice CRIF", "20+ anni di esperienza"].map((tag) => (
+              {["Guida e coordina il team", "20.000+ perizie", "CTU Tribunale di Milano", "Collaboratrice CRIF", "20+ anni di esperienza"].map((tag) => (
                 <span key={tag} className="text-xs font-semibold bg-[#0F2540] text-white px-3 py-1.5 rounded-full">
                   {tag}
                 </span>

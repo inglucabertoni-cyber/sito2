@@ -303,7 +303,7 @@ export default async function HomePage() {
                 <span className="text-[#F59E0B]">Diventa il nostro.</span>
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4 text-sm sm:text-base">
-                <strong>Chiara Roccaro e Luca Bertoni</strong> sono due ingegneri gestionali che hanno vissuto sulla propria pelle ogni complessità del mercato immobiliare — e hanno deciso di mettere quella conoscenza al servizio di chi acquista.
+                <strong>Giuliana Roccaro e Luca Bertoni</strong> sono due ingegneri gestionali che hanno vissuto sulla propria pelle ogni complessità del mercato immobiliare — e hanno deciso di mettere quella conoscenza al servizio di chi acquista.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4 text-sm sm:text-base">
                 Il nostro approccio è semplice: <strong>diventiamo clienti insieme a te</strong>. Analizziamo ogni immobile come se lo stessimo acquistando noi, verifichiamo ogni documento come se dovessimo firmarci noi, progettiamo ogni spazio come se ci dovessimo vivere noi.

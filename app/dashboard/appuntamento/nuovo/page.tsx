@@ -82,6 +82,20 @@ export default async function NuovoAppuntamentoPage() {
 
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-1.5">
+                Indirizzo dell'immobile <span className="text-red-400">*</span>
+              </label>
+              <input
+                type="text"
+                name="address"
+                required
+                placeholder="Es: Via Roma 12, Milano"
+                className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent"
+              />
+              <p className="text-xs text-gray-400 mt-1">Via, numero civico e città — ci serve per organizzare il sopralluogo</p>
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-1.5">
                 Data preferita
                 <span className="text-gray-400 font-normal ml-1">(indicativa)</span>
               </label>

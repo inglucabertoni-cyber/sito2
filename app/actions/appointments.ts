@@ -4,25 +4,42 @@ import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import { z } from "zod";
+
+const BookSchema = z.object({
+  city: z.string().min(1, "Seleziona una città"),
+  serviceType: z.string().min(1, "Seleziona un tipo di servizio"),
+  address: z.string().min(5, "Inserisci l'indirizzo completo (via, numero, città)"),
+  preferredDate: z.string().optional(),
+  notes: z.string().optional(),
+});
 
 export async function bookAppointment(formData: FormData) {
   const session = await auth();
   if (!session?.user) redirect("/login");
 
-  const city = (formData.get("city") as string).trim();
-  const serviceType = (formData.get("serviceType") as string).trim();
-  const preferredDate = (formData.get("preferredDate") as string).trim() || null;
-  const notes = (formData.get("notes") as string).trim() || null;
+  const raw = {
+    city: (formData.get("city") as string ?? "").trim(),
+    serviceType: (formData.get("serviceType") as string ?? "").trim(),
+    address: (formData.get("address") as string ?? "").trim(),
+    preferredDate: (formData.get("preferredDate") as string ?? "").trim() || undefined,
+    notes: (formData.get("notes") as string ?? "").trim() || undefined,
+  };
 
-  if (!city || !serviceType) return;
+  const result = BookSchema.safeParse(raw);
+  if (!result.success) {
+    const msg = result.error.errors.map((e) => e.message).join(", ");
+    throw new Error(msg);
+  }
 
   await prisma.appointment.create({
     data: {
       clientId: session.user.id!,
-      city,
-      serviceType,
-      preferredDate,
-      notes,
+      city: result.data.city,
+      address: result.data.address,
+      serviceType: result.data.serviceType,
+      preferredDate: result.data.preferredDate ?? null,
+      notes: result.data.notes ?? null,
       status: "RICHIESTA",
     },
   });

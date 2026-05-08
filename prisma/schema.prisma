@@ -59,6 +59,7 @@ model Appointment {
   client         User      @relation(fields: [clientId], references: [id])
   serviceType    String    @default("GENERALE")
   city           String
+  address        String?
   notes          String?
   preferredDate  String?
   status         String    @default("RICHIESTA")

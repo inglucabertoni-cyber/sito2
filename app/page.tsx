@@ -7,10 +7,10 @@ const SERVIZI = [
   {
     numero: "01",
     titolo: "Analisi dell'immobile",
-    sottotitolo: "Scegli con dati alla mano",
+    sottotitolo: "Compra o vendi al giusto prezzo",
     descrizione:
-      "Valutiamo la congruità del prezzo rispetto al mercato locale e verifichiamo che l'immobile risponda alle tue reali aspettative. Il nostro approccio ingegneristico trasforma l'emozione dell'acquisto in una decisione razionale e documentata.",
-    dettagli: ["Analisi comparativa di mercato", "Valutazione rischio/opportunità", "Report di congruità prezzo", "Verifica aspettative vs realtà"],
+      "Per chi compra: verifichiamo che il prezzo sia congruo e che l'immobile risponda alle tue aspettative reali. Per chi vende: sapere il valore esatto del tuo immobile prima di trattare è il primo vantaggio negoziale.",
+    dettagli: ["Analisi comparativa di mercato", "Valutazione rischio/opportunità", "Report di congruità prezzo", "Sostenibilità finanziaria dell'operazione"],
     icona: (
       <svg viewBox="0 0 48 48" className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="2">
         <circle cx="24" cy="20" r="12" strokeLinejoin="round"/>
@@ -24,10 +24,10 @@ const SERVIZI = [
   {
     numero: "02",
     titolo: "Due diligence tecnica",
-    sottotitolo: "Acquista senza sorprese",
+    sottotitolo: "Nessuna sorpresa. Mai.",
     descrizione:
-      "Verifichiamo la legittimità urbanistica e catastale dell'immobile, controlliamo permessi, concessioni e conformità. Ti proteggiamo da rischi nascosti prima che diventino problemi costosi e irrisolvibili.",
-    dettagli: ["Verifica conformità catastale", "Controllo permessi edilizi", "Analisi abusi e condoni", "Relazione tecnica completa"],
+      "Per chi compra: ogni rischio nascosto identificato prima della firma. Per chi vende: un immobile con documenti in ordine, conforme alla normativa nazionale e locale, vale di più — e si vende senza blocchi last-minute.",
+    dettagli: ["Verifica conformità catastale e urbanistica", "Controllo permessi e concessioni", "Regolarizzazione difformità e sanatorie", "Relazione tecnica certificata"],
     icona: (
       <svg viewBox="0 0 48 48" className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="2">
         <rect x="8" y="6" width="28" height="36" rx="2" strokeLinejoin="round"/>
@@ -40,10 +40,10 @@ const SERVIZI = [
   {
     numero: "03",
     titolo: "Progettazione e soluzioni",
-    sottotitolo: "La casa che immagini, realizzata",
+    sottotitolo: "Comfort, fruibilità, valore",
     descrizione:
-      "Progettiamo gli spazi in base alle tue esigenze di vita e troviamo soluzioni tecniche personalizzate. Dalla planimetria al progetto di ristrutturazione, ogni centimetro è ottimizzato con metodo ingegneristico.",
-    dettagli: ["Analisi esigenze e stili di vita", "Progetto architettonico preliminare", "Ottimizzazione spazi e layout", "Soluzioni impiantistiche"],
+      "Progettiamo spazi integrati: domotica, climatizzazione, materiali, layout. Non pezzi separati affidati a chiunque, ma un progetto unico che massimizza il comfort abitativo, la fruibilità e il valore dell'immobile.",
+    dettagli: ["Analisi esigenze e stili di vita", "Domotica e impianti integrati", "Ottimizzazione spazi e comfort", "Scelta materiali e soluzioni tecniche"],
     icona: (
       <svg viewBox="0 0 48 48" className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M6 42l8-8 6 6-8 8-6-6z" strokeLinejoin="round"/>
@@ -56,10 +56,10 @@ const SERVIZI = [
   {
     numero: "04",
     titolo: "Gare d'appalto e realizzazione",
-    sottotitolo: "Dal progetto alla consegna",
+    sottotitolo: "Budget rispettato. Qualità garantita.",
     descrizione:
-      "Gestiamo le gare d'appalto per selezionare i migliori esecutori al prezzo giusto e supervisioniamo la fase realizzativa. Seguiamo ogni fase del cantiere garantendo qualità, tempi e rispetto del budget.",
-    dettagli: ["Redazione capitolato d'appalto", "Selezione e valutazione imprese", "Direzione lavori", "Collaudo e consegna finale"],
+      "Selezioniamo le imprese con gara aperta, gestiamo il cantiere e verifichiamo ogni fase. Nessun preventivo gonfiato, nessun sorpasso di budget ingiustificato. Consegniamo quello che è stato progettato e promesso.",
+    dettagli: ["Redazione capitolato d'appalto", "Selezione imprese con gara comparativa", "Direzione lavori e controllo costi", "Collaudo e consegna finale"],
     icona: (
       <svg viewBox="0 0 48 48" className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="2">
         <rect x="4" y="20" width="40" height="22" rx="2" strokeLinejoin="round"/>
@@ -182,10 +182,10 @@ export default async function HomePage() {
 
         </div>
 
-        {/* Wave */}
+        {/* Wave → amber */}
         <div className="absolute bottom-0 left-0 right-0">
           <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <path d="M0 60V30C360 0 720 60 1080 30C1260 15 1380 25 1440 30V60H0Z" fill="white"/>
+            <path d="M0 60V30C360 0 720 60 1080 30C1260 15 1380 25 1440 30V60H0Z" fill="#F59E0B"/>
           </svg>
         </div>
       </section>
@@ -216,6 +216,23 @@ export default async function HomePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── NUMERI ── */}
+      <section className="bg-[#0F2540] py-10 px-4 sm:px-6">
+        <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+          {[
+            { valore: "20.000+", label: "perizie redatte a Milano" },
+            { valore: "20+", label: "anni nel mercato immobiliare" },
+            { valore: "CTU", label: "nominata dal Tribunale di Milano" },
+            { valore: "20+", label: "ingegneri e specialisti nel team" },
+          ].map((n) => (
+            <div key={n.label}>
+              <div className="text-2xl sm:text-3xl font-black text-[#F59E0B] leading-none mb-1">{n.valore}</div>
+              <div className="text-[11px] sm:text-xs text-white/45 leading-tight">{n.label}</div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -283,52 +300,17 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── COME FUNZIONA ── */}
-      <section id="come-funziona" className="py-20 sm:py-28 px-4 sm:px-6 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
-            <p className="text-[#F59E0B] font-bold text-xs sm:text-sm tracking-widest uppercase mb-3">Il percorso</p>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#0F2540]">
-              Quattro passi per realizzare<br className="hidden sm:block" /> il tuo progetto
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
-            {FASI.map((fase) => (
-              <div key={fase.n} className="flex gap-5 p-5 sm:p-6 rounded-2xl border border-gray-100 bg-gray-50 hover:border-amber-200 hover:bg-amber-50/30 transition-colors">
-                <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#0F2540] flex items-center justify-center">
-                  <span className="text-[10px] font-black text-[#F59E0B] tracking-widest">{fase.n}</span>
-                </div>
-                <div>
-                  <h3 className="font-bold text-[#0F2540] mb-1 text-sm sm:text-base">{fase.titolo}</h3>
-                  <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">{fase.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-10">
-            <Link
-              href={session ? (role === "ADMIN" ? "/admin" : "/dashboard/appuntamento/nuovo") : "/register"}
-              className="inline-flex items-center gap-2 bg-[#0F2540] hover:bg-[#1E3A5F] text-white font-bold px-7 py-3.5 rounded-xl text-sm transition-colors"
-            >
-              Inizia ora — è gratuito
-              <span className="text-[#F59E0B]">→</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* ── SERVIZI ── */}
       <section id="servizi" className="py-20 sm:py-24 px-4 sm:px-6 bg-gray-50/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <p className="text-[#F59E0B] font-bold text-xs sm:text-sm tracking-widest uppercase mb-3">I nostri servizi</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#0F2540]">
-              Ogni servizio è un passo<br className="hidden sm:block" /> verso il tuo obiettivo
+              Cosa facciamo, concretamente
             </h2>
             <p className="text-gray-500 mt-4 max-w-xl mx-auto text-sm sm:text-base">
-              Dalla valutazione all&apos;acquisto, dalla vendita alla ristrutturazione — quattro servizi integrati per ogni fase della vita di una casa.
+              Quattro servizi integrati — per chi compra, per chi vende, per chi ristruttura.
+              Ogni servizio porta la nostra firma.
             </p>
           </div>
 
@@ -375,42 +357,78 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── CHI SIAMO ── */}
-      <section className="py-20 sm:py-24 px-4 sm:px-6 bg-white">
+      {/* ── COME FUNZIONA ── */}
+      <section id="come-funziona" className="py-20 sm:py-24 px-4 sm:px-6 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-10 sm:gap-14 items-center">
-            <div>
-              <p className="text-[#F59E0B] font-bold text-xs sm:text-sm tracking-widest uppercase mb-3">Chi siamo</p>
-              <h2 className="text-2xl sm:text-3xl font-black text-[#0F2540] mb-5 leading-tight">
-                Il tuo sogno di casa?<br />
-                <span className="text-[#F59E0B]">Diventa il nostro.</span>
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-4 text-sm sm:text-base">
-                <strong>Giuliana Roccaro e Luca Bertoni</strong> sono due ingegneri gestionali che hanno vissuto sulla propria pelle ogni complessità del mercato immobiliare — e hanno deciso di mettere quella conoscenza al servizio di chi acquista.
-              </p>
-              <p className="text-gray-600 leading-relaxed mb-4 text-sm sm:text-base">
-                Il nostro approccio è semplice: <strong>diventiamo clienti insieme a te</strong>. Analizziamo ogni immobile come se lo stessimo acquistando noi, verifichiamo ogni documento come se dovessimo firmarci noi, progettiamo ogni spazio come se ci dovessimo vivere noi.
-              </p>
-              <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
-                Non siamo agenti immobiliari. Siamo dalla tua parte — con rigore metodologico, indipendenza totale e un solo obiettivo: <strong>rendere reali i tuoi desideri</strong>.
-              </p>
-            </div>
+          <div className="text-center mb-12 sm:mb-16">
+            <p className="text-[#F59E0B] font-bold text-xs sm:text-sm tracking-widest uppercase mb-3">Il percorso</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#0F2540]">
+              Come si lavora con noi
+            </h2>
+            <p className="text-gray-500 mt-4 max-w-xl mx-auto text-sm sm:text-base">
+              Dalla prima chiamata alla consegna finale — semplice, trasparente, senza sorprese.
+            </p>
+          </div>
 
-            <div className="space-y-3 sm:space-y-4">
-              {[
-                { titolo: "Indipendenza assoluta", desc: "Non prendiamo commissioni su immobili o imprese. Lavoriamo solo per te, senza nessun conflitto d'interesse." },
-                { titolo: "Metodo ingegneristico", desc: "Ogni valutazione è basata su dati reali, analisi comparative e metodologie verificabili — non su intuizioni." },
-                { titolo: "Un unico interlocutore", desc: "Dalla prima analisi alla consegna delle chiavi, sempre le stesse persone al tuo fianco. Nessun passaggio di consegne." },
-              ].map((item) => (
-                <div key={item.titolo} className="flex gap-4 bg-gray-50 rounded-xl p-4 sm:p-5 border border-gray-100 hover:border-amber-200 transition-colors">
-                  <div className="w-1.5 rounded-full bg-[#F59E0B] flex-shrink-0 self-stretch" />
-                  <div>
-                    <p className="font-bold text-[#0F2540] mb-1 text-sm sm:text-base">{item.titolo}</p>
-                    <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">{item.desc}</p>
-                  </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+            {FASI.map((fase) => (
+              <div key={fase.n} className="flex gap-5 p-5 sm:p-6 rounded-2xl border border-gray-100 bg-gray-50 hover:border-amber-200 hover:bg-amber-50/30 transition-colors">
+                <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#0F2540] flex items-center justify-center">
+                  <span className="text-[10px] font-black text-[#F59E0B] tracking-widest">{fase.n}</span>
                 </div>
-              ))}
-            </div>
+                <div>
+                  <h3 className="font-bold text-[#0F2540] mb-1 text-sm sm:text-base">{fase.titolo}</h3>
+                  <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">{fase.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href={session ? (role === "ADMIN" ? "/admin" : "/dashboard/appuntamento/nuovo") : "/register"}
+              className="inline-flex items-center gap-2 bg-[#0F2540] hover:bg-[#1E3A5F] text-white font-bold px-7 py-3.5 rounded-xl text-sm transition-colors"
+            >
+              Inizia ora — è gratuito
+              <span className="text-[#F59E0B]">→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CHI SIAMO — teaser ── */}
+      <section className="bg-[#0F2540] py-14 sm:py-16 px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto grid sm:grid-cols-2 gap-8 items-center">
+          <div>
+            <p className="text-[#F59E0B] font-bold text-xs tracking-widest uppercase mb-4">Chi siamo</p>
+            <h2 className="text-2xl sm:text-3xl font-black text-white mb-4 leading-tight">
+              Giuliana Roccaro e Luca Bertoni.<br />
+              <span className="text-[#F59E0B]">Ingegneri gestionali. Dalla tua parte.</span>
+            </h2>
+            <p className="text-white/60 text-sm sm:text-base leading-relaxed">
+              Giuliana guida e coordina ogni progetto: oltre 20 anni nel mercato milanese,
+              20.000+ perizie, CTU nominata dal Tribunale di Milano.
+              Luca porta la visione tecnica e tecnologica.
+              Insieme guidano un team di oltre 20 ingegneri e specialisti.
+            </p>
+          </div>
+          <div className="flex flex-col gap-4">
+            {[
+              { n: "20.000+", t: "perizie firmate", s: "Credibilità costruita in vent'anni, perizia per perizia." },
+              { n: "0", t: "conflitti d'interesse", s: "Non vendiamo immobili. Non favoriamo imprese. Lavoriamo per te." },
+              { n: "20+", t: "specialisti nel team", s: "Il professionista giusto, nel momento esatto in cui serve." },
+            ].map((item) => (
+              <div key={item.t} className="flex items-start gap-4 bg-white/5 border border-white/10 rounded-xl px-5 py-4">
+                <div className="text-xl font-black text-[#F59E0B] leading-none w-16 flex-shrink-0">{item.n}</div>
+                <div>
+                  <p className="text-white font-bold text-sm">{item.t}</p>
+                  <p className="text-white/45 text-xs leading-relaxed">{item.s}</p>
+                </div>
+              </div>
+            ))}
+            <Link href="/chi-siamo" className="text-sm font-semibold text-[#F59E0B] hover:text-white transition-colors mt-1">
+              La nostra storia completa →
+            </Link>
           </div>
         </div>
       </section>

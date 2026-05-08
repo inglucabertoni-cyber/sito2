@@ -149,7 +149,7 @@ export default async function HomePage() {
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-36 sm:pt-44 pb-28 sm:pb-36 text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/10 text-white/70 text-[10px] sm:text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-8">
             <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B] inline-block" />
-            Studio di Ingegneria Gestionale
+            Soluzioni di ingegno per la tua casa, presente e futura
           </div>
 
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-black leading-[1.1] mb-6 tracking-tight">

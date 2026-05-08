@@ -51,8 +51,8 @@ export function LogoFull({ inverted = false }: { inverted?: boolean }) {
           </span>
         </div>
         <span
-          className="text-[8.5px] font-medium tracking-[0.18em] uppercase whitespace-nowrap"
-          style={{ color: byColor }}
+          className="text-[11px] italic whitespace-nowrap"
+          style={{ color: byColor, fontFamily: "var(--font-caveat), cursive", fontWeight: 400 }}
         >
           by Roccaro e Bertoni
         </span>

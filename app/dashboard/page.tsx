@@ -40,8 +40,6 @@ export default async function DashboardPage({
     }),
   ]);
 
-  const ultimoAppuntamento = appuntamenti[0] ?? null;
-
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white border-b border-gray-100">
@@ -69,56 +67,19 @@ export default async function DashboardPage({
           </div>
         )}
 
-        {/* Sezione appuntamento */}
+        {/* Sezione consulenze */}
         <section>
           <div className="flex items-center justify-between mb-3">
-            <h2 className="text-lg font-black text-[#0F2540]">La mia consulenza</h2>
+            <h2 className="text-lg font-black text-[#0F2540]">Le mie consulenze</h2>
+            <Link
+              href="/dashboard/appuntamento/nuovo"
+              className="text-xs bg-[#F59E0B] hover:bg-[#D97706] text-white font-semibold px-4 py-2 rounded-xl transition-colors"
+            >
+              + Nuova consulenza
+            </Link>
           </div>
 
-          {ultimoAppuntamento ? (
-            <div className={`rounded-2xl border p-5 ${
-              ultimoAppuntamento.status === "CONFERMATO"
-                ? "bg-green-50 border-green-200"
-                : ultimoAppuntamento.status === "ANNULLATO"
-                ? "bg-gray-100 border-gray-200 opacity-70"
-                : "bg-blue-50 border-blue-200"
-            }`}>
-              <div className="flex flex-wrap items-start justify-between gap-3">
-                <div>
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="font-bold text-sm text-gray-800">
-                      {SERVICE_LABEL[ultimoAppuntamento.serviceType] ?? ultimoAppuntamento.serviceType}
-                    </span>
-                    <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${
-                      ultimoAppuntamento.status === "CONFERMATO" ? "bg-green-200 text-green-800" :
-                      ultimoAppuntamento.status === "ANNULLATO" ? "bg-gray-200 text-gray-600" :
-                      "bg-blue-200 text-blue-800"
-                    }`}>
-                      {ultimoAppuntamento.status === "CONFERMATO" ? "Confermato" :
-                       ultimoAppuntamento.status === "ANNULLATO" ? "Annullato" : "In attesa di conferma"}
-                    </span>
-                  </div>
-                  <p className="text-xs text-gray-500">📍 {ultimoAppuntamento.city}</p>
-                  {ultimoAppuntamento.confirmedDate && (
-                    <p className="text-sm font-semibold text-green-700 mt-1">
-                      📅 {new Date(ultimoAppuntamento.confirmedDate).toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" })}
-                    </p>
-                  )}
-                  {ultimoAppuntamento.confirmedNotes && (
-                    <p className="text-xs text-gray-600 mt-1">{ultimoAppuntamento.confirmedNotes}</p>
-                  )}
-                </div>
-                {ultimoAppuntamento.status !== "CONFERMATO" && ultimoAppuntamento.status !== "ANNULLATO" && (
-                  <Link
-                    href="/dashboard/appuntamento/nuovo"
-                    className="text-xs text-blue-600 hover:underline"
-                  >
-                    Modifica richiesta
-                  </Link>
-                )}
-              </div>
-            </div>
-          ) : (
+          {appuntamenti.length === 0 ? (
             <Link
               href="/dashboard/appuntamento/nuovo"
               className="block rounded-2xl border-2 border-dashed border-amber-300 bg-amber-50/60 hover:bg-amber-50 hover:border-amber-400 transition-colors p-6 text-center"
@@ -130,6 +91,44 @@ export default async function DashboardPage({
                 Prenota ora →
               </span>
             </Link>
+          ) : (
+            <div className="space-y-3">
+              {appuntamenti.map((a) => (
+                <div key={a.id} className={`rounded-2xl border p-4 sm:p-5 ${
+                  a.status === "CONFERMATO" ? "bg-green-50 border-green-200" :
+                  a.status === "ANNULLATO" ? "bg-gray-100 border-gray-200 opacity-60" :
+                  "bg-blue-50 border-blue-200"
+                }`}>
+                  <div className="flex flex-wrap items-start justify-between gap-2">
+                    <div>
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="font-bold text-sm text-gray-800">
+                          {SERVICE_LABEL[a.serviceType] ?? a.serviceType}
+                        </span>
+                        <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${
+                          a.status === "CONFERMATO" ? "bg-green-200 text-green-800" :
+                          a.status === "ANNULLATO" ? "bg-gray-200 text-gray-600" :
+                          "bg-blue-200 text-blue-800"
+                        }`}>
+                          {a.status === "CONFERMATO" ? "Confermato" :
+                           a.status === "ANNULLATO" ? "Annullato" : "In attesa di conferma"}
+                        </span>
+                      </div>
+                      <p className="text-xs text-gray-500">📍 {a.city}</p>
+                      {a.confirmedDate && (
+                        <p className="text-sm font-semibold text-green-700 mt-1">
+                          📅 {new Date(a.confirmedDate).toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" })}
+                        </p>
+                      )}
+                      {a.confirmedNotes && (
+                        <p className="text-xs text-gray-600 mt-1">{a.confirmedNotes}</p>
+                      )}
+                    </div>
+                    <p className="text-xs text-gray-400">{new Date(a.createdAt).toLocaleDateString("it-IT")}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           )}
         </section>
 

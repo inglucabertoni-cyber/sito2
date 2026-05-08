@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { prisma } from "@/lib/prisma";
 import { createService, toggleService, deleteService } from "@/app/actions/admin";
 import { WORKFLOWS } from "@/lib/constants";

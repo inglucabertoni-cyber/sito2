@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { prisma } from "@/lib/prisma";
 import { STATO_COLOR, STATO_LABEL } from "@/lib/constants";
 import Link from "next/link";

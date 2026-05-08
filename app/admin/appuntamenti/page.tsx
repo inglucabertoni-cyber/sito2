@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { confirmAppointment, cancelAppointment } from "@/app/actions/appointments";

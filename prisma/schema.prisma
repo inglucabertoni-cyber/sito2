@@ -1,0 +1,82 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id           String        @id @default(cuid())
+  name         String
+  email        String        @unique
+  password     String
+  role         String        @default("CLIENT")
+  createdAt    DateTime      @default(now())
+  requests     Request[]
+  appointments Appointment[]
+}
+
+model Service {
+  id           String    @id @default(cuid())
+  name         String
+  description  String
+  workflowType String    @default("GENERICO")
+  isActive     Boolean   @default(true)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  requests     Request[]
+}
+
+model Request {
+  id              String         @id @default(cuid())
+  clientId        String
+  serviceId       String
+  notes           String?
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+  appointmentId   String?        @unique
+  client          User           @relation(fields: [clientId], references: [id])
+  service         Service        @relation(fields: [serviceId], references: [id])
+  statusUpdates   StatusUpdate[]
+  documents       Document[]
+  appointment     Appointment?   @relation(fields: [appointmentId], references: [id])
+}
+
+model StatusUpdate {
+  id        String   @id @default(cuid())
+  requestId String
+  status    String
+  message   String?
+  createdAt DateTime @default(now())
+  request   Request  @relation(fields: [requestId], references: [id])
+}
+
+model Appointment {
+  id             String    @id @default(cuid())
+  clientId       String
+  client         User      @relation(fields: [clientId], references: [id])
+  serviceType    String    @default("GENERALE")
+  city           String
+  notes          String?
+  preferredDate  String?
+  status         String    @default("RICHIESTA")
+  confirmedDate  String?
+  confirmedNotes String?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  request        Request?
+}
+
+model Document {
+  id         String   @id @default(cuid())
+  requestId  String
+  request    Request  @relation(fields: [requestId], references: [id])
+  name       String
+  path       String
+  size       Int
+  mimeType   String
+  uploadedBy String
+  createdAt  DateTime @default(now())
+}

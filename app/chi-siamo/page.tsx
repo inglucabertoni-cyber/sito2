@@ -29,7 +29,12 @@ export default function ChiSiamoPage() {
           <p className="text-white/65 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
             Abbiamo vissuto sulla nostra pelle ogni dubbio, ogni trattativa, ogni sorpresa nascosta
             dietro una porta. Ed è da quella esperienza diretta che è nata la nostra missione:
-            stare davvero dalla parte di chi acquista.
+            stare davvero dalla parte di chi acquista — e di chi vende.
+          </p>
+          <p className="text-white/50 text-sm sm:text-base leading-relaxed max-w-xl mx-auto mt-4">
+            Comprare o gestire una casa è uno dei passi più importanti e complessi della vita.
+            Oggi il costo di ogni cosa è rilevante — e un errore si paga caro.
+            Noi esistiamo per eliminare quel rischio.
           </p>
         </div>
       </section>
@@ -45,6 +50,7 @@ export default function ChiSiamoPage() {
             <h3 className="text-xl font-semibold text-[#F59E0B] mb-2">Roccaro</h3>
             <p className="text-sm font-semibold text-gray-400 mb-6 italic">
               Guida e coordina ogni progetto — dal primo contatto alla consegna finale.
+              Insieme a Luca, è alla testa di un team di oltre <strong className="text-gray-500">20 ingegneri e specialisti</strong>.
             </p>
 
             <div className="space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed">
@@ -144,7 +150,7 @@ export default function ChiSiamoPage() {
             <h2 className="text-3xl sm:text-4xl font-black text-[#0F2540] mb-1">Luca</h2>
             <h3 className="text-xl font-semibold text-[#F59E0B] mb-2">Bertoni</h3>
             <p className="text-sm font-semibold text-gray-400 mb-6 italic">
-              Porta la tecnologia dove gli altri si fermano.
+              Porta la tecnologia dove gli altri si fermano — e coordina la componente tecnica del team.
             </p>
 
             <div className="space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed">
@@ -171,16 +177,16 @@ export default function ChiSiamoPage() {
           <div className="text-center mb-10">
             <p className="text-[#F59E0B] text-xs font-semibold tracking-widest uppercase mb-4">Il lavoro di squadra</p>
             <h2 className="text-2xl sm:text-3xl font-black text-white mb-4 leading-tight">
-              Un mondo di competenze al servizio del cliente.
+              Un team di oltre 20 ingegneri e specialisti<br className="hidden sm:block" /> al tuo servizio.
             </h2>
             <p className="text-white/55 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-6">
-              Il lavoro di squadra è essenziale. <strong className="text-white/80">help for house</strong> non è
-              uno studio singolo — è un ecosistema di professionisti selezionati, coordinati da Giuliana,
-              ciascuno coinvolto quando la situazione lo richiede.
+              <strong className="text-white/80">help for house</strong> non è uno studio singolo — è un ecosistema
+              di professionisti selezionati, coordinati da Giuliana e Luca, ciascuno coinvolto
+              nel momento esatto in cui la situazione lo richiede.
             </p>
             <p className="text-white/55 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
               Il risultato è un servizio <strong className="text-white/80">profondamente personalizzato</strong>
-              — cucito sulle esigenze di ogni singolo cliente — ma sempre
+              — cucito sulle esigenze di ogni cliente — ma sempre
               <strong className="text-white/80"> allineato al meglio che il mercato può offrire</strong>.
               Non un compromesso, ma l'eccellenza accessibile.
             </p>
@@ -197,6 +203,56 @@ export default function ChiSiamoPage() {
               <div key={item.titolo} className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-colors">
                 <p className="font-bold text-white text-sm mb-1">{item.titolo}</p>
                 <p className="text-white/45 text-xs leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Perché scegliere help for house */}
+      <section className="bg-white py-16 sm:py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-[#F59E0B] text-xs font-semibold tracking-widest uppercase mb-4">Perché sceglierci</p>
+            <h2 className="text-2xl sm:text-3xl font-black text-[#0F2540] mb-4 leading-tight">
+              Vendere o comprare con serenità,<br className="hidden sm:block" /> al giusto prezzo. Senza brutte sorprese.
+            </h2>
+            <p className="text-gray-500 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+              <strong className="text-[#0F2540]">help for house</strong> nasce per questo: accompagnarti in uno dei
+              passi più importanti della tua vita con la certezza di avere al fianco chi conosce ogni rischio
+              e sa come evitarlo.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-6 mb-10">
+            <div className="bg-amber-50 rounded-2xl p-6 border border-amber-100">
+              <div className="text-2xl font-black text-[#F59E0B] mb-3">Il costo dell'errore</div>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Oggi ogni spesa conta. Un acquisto sbagliato, un vizio nascosto, una difformità urbanistica
+                non rilevata prima del rogito possono tradursi in <strong className="text-[#0F2540]">decine di migliaia
+                di euro di danni</strong> — o in un bene impossibile da rivendere.
+              </p>
+            </div>
+            <div className="bg-[#0F2540] rounded-2xl p-6">
+              <div className="text-2xl font-black text-white mb-3">Il valore della serenità</div>
+              <p className="text-sm text-white/65 leading-relaxed">
+                Il costo del nostro servizio è <strong className="text-white/90">abbondantemente compensato</strong> dal
+                rischio che eliminiamo: processi di acquisto che diventano problematici dopo la prima firma,
+                beni gravati da vizi o difformità quasi al limite della truffa.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid sm:grid-cols-3 gap-4">
+            {[
+              { icon: "🔍", titolo: "Due diligence completa", desc: "Verifichiamo ogni aspetto tecnico, legale e urbanistico prima che tu firmi qualsiasi documento." },
+              { icon: "⚖️", titolo: "Valutazione al giusto prezzo", desc: "Oltre 20.000 perizie a Milano: sappiamo esattamente quanto vale un immobile e ti tuteliamo in trattativa." },
+              { icon: "🛡️", titolo: "Zero brutte sorprese", desc: "Tutto quello che c'è da sapere te lo diciamo noi, prima. Nessun problema scoperto dopo che è troppo tardi." },
+            ].map((item) => (
+              <div key={item.titolo} className="bg-gray-50 rounded-2xl p-5 border border-gray-100">
+                <div className="text-2xl mb-3">{item.icon}</div>
+                <p className="font-bold text-[#0F2540] text-sm mb-2">{item.titolo}</p>
+                <p className="text-xs text-gray-500 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>

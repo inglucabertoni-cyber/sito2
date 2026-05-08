@@ -306,21 +306,30 @@ export default function ChiSiamoPage() {
         </div>
       </section>
 
-      {/* Missione */}
-      <section className="bg-gray-50 py-16 sm:py-20 px-4">
+      {/* Il nostro impegno */}
+      <section className="bg-[#0F2540] py-16 sm:py-24 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-[#F59E0B] text-xs font-semibold tracking-widest uppercase mb-4">La nostra missione</p>
-          <h2 className="text-2xl sm:text-3xl font-black text-[#0F2540] mb-6 leading-tight">
-            Trasformare i tuoi desideri in qualcosa di reale, concreto, tuo.
+          <p className="text-[#F59E0B] text-xs font-semibold tracking-widest uppercase mb-6">Il nostro impegno</p>
+          <h2 className="text-3xl sm:text-4xl font-black text-white leading-tight mb-8">
+            Siamo bravi —<br />
+            <span className="text-[#F59E0B]">e non dobbiamo vendere nulla.</span>
           </h2>
-          <p className="text-gray-500 leading-relaxed mb-10">
-            Insieme portiamo competenze complementari: la conoscenza profonda del mercato immobiliare
-            milanese di Giuliana e la visione tecnica e tecnologica di Luca. Due prospettive,
-            un unico obiettivo — aiutarti a fare la scelta giusta.
-          </p>
+          <div className="space-y-5 text-white/65 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-12">
+            <p>
+              Non guadagniamo sulle tue scelte. Non abbiamo immobili da piazzare,
+              imprese da favorire, prodotti da promuovere.
+              <strong className="text-white"> Il nostro unico interesse sei tu.</strong>
+            </p>
+            <p>
+              Ti consigliamo con onestà, <strong className="text-white">scegliamo insieme</strong> e
+              ci assumiamo la responsabilità congiunta di ogni consiglio che ti diamo.
+              Se ci fidiamo di una soluzione abbastanza da raccomandarla,
+              significa che la raccomanderemmo anche a noi stessi.
+            </p>
+          </div>
           <Link
             href="/dashboard/appuntamento/nuovo"
-            className="inline-block bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold px-8 py-4 rounded-xl text-sm transition-colors shadow-lg shadow-amber-200"
+            className="inline-block bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold px-8 py-4 rounded-xl text-sm transition-colors shadow-lg shadow-amber-900/40"
           >
             Prenota la tua consulenza gratuita →
           </Link>

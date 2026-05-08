@@ -210,9 +210,9 @@ export default async function HomePage() {
               { titolo: "Scegliamo insieme", desc: "Non decidiamo al posto tuo — ti diamo tutti gli elementi per decidere con consapevolezza." },
               { titolo: "Gestiamo la sostenibilità finanziaria", desc: "Ti aiutiamo a capire se l'operazione è sostenibile: costi reali, rischi nascosti, margini di manovra." },
             ].map((item) => (
-              <div key={item.titolo} className="bg-white/15 border border-white/25 rounded-2xl p-5 text-left">
-                <p className="font-black text-white text-sm mb-2">{item.titolo}</p>
-                <p className="text-white/75 text-xs leading-relaxed">{item.desc}</p>
+              <div key={item.titolo} className="bg-white rounded-2xl p-5 text-left shadow-sm">
+                <p className="font-black text-[#0F2540] text-sm mb-2">{item.titolo}</p>
+                <p className="text-gray-500 text-xs leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>

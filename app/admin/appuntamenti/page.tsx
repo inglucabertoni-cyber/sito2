@@ -27,7 +27,13 @@ export default async function AdminAppuntamentiPage() {
     orderBy: { createdAt: "desc" },
   });
 
+  const oggi = new Date();
+  oggi.setHours(0, 0, 0, 0);
+
   const inAttesa = appuntamenti.filter((a) => a.status === "RICHIESTA");
+  const daFare = appuntamenti.filter((a) => a.status === "CONFERMATO" && a.confirmedDate && new Date(a.confirmedDate) >= oggi);
+  const fatti = appuntamenti.filter((a) => a.status === "CONFERMATO" && a.confirmedDate && new Date(a.confirmedDate) < oggi);
+  const annullati = appuntamenti.filter((a) => a.status === "ANNULLATO");
   const altri = appuntamenti.filter((a) => a.status !== "RICHIESTA");
 
   return (
@@ -41,11 +47,25 @@ export default async function AdminAppuntamentiPage() {
       </header>
 
       <main className="max-w-4xl mx-auto px-4 py-8">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-black text-[#0F2540]">Appuntamenti</h2>
-          <span className="text-sm bg-blue-100 text-blue-700 font-semibold px-3 py-1 rounded-full">
-            {inAttesa.length} in attesa
-          </span>
+        <h2 className="text-2xl font-black text-[#0F2540] mb-6">Appuntamenti</h2>
+
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+          <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
+            <p className="text-3xl font-bold text-blue-600">{inAttesa.length}</p>
+            <p className="text-sm text-gray-500 mt-1">In attesa</p>
+          </div>
+          <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
+            <p className="text-3xl font-bold text-amber-500">{daFare.length}</p>
+            <p className="text-sm text-gray-500 mt-1">Da fare</p>
+          </div>
+          <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
+            <p className="text-3xl font-bold text-green-600">{fatti.length}</p>
+            <p className="text-sm text-gray-500 mt-1">Fatti</p>
+          </div>
+          <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
+            <p className="text-3xl font-bold text-red-400">{annullati.length}</p>
+            <p className="text-sm text-gray-500 mt-1">Annullati</p>
+          </div>
         </div>
 
         {inAttesa.length > 0 && (

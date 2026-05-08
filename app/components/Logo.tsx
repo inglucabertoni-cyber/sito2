@@ -2,46 +2,56 @@ export default function Logo({ className = "" }: { className?: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 48 48"
+      viewBox="0 0 52 44"
       className={className}
       aria-label="help for house"
     >
-      {/* Amber bar — R / Roccaro */}
-      <polygon points="2,4 20,4 18,44 0,44" fill="#F59E0B" />
-      {/* Navy bar — B / Bertoni */}
-      <polygon points="26,4 44,4 46,44 28,44" fill="#0F2540" />
-      {/* Thin amber accent line between bars */}
-      <rect x="22" y="4" width="2" height="40" fill="#F59E0B" opacity="0.3" />
+      {/* H amber — help */}
+      <rect x="2"  y="2"  width="5" height="40" rx="2" fill="#F59E0B" />
+      <rect x="2"  y="19" width="18" height="5"  rx="2" fill="#F59E0B" />
+      <rect x="15" y="2"  width="5" height="40" rx="2" fill="#F59E0B" />
+
+      {/* H navy — house (shifted right, slightly overlapping) */}
+      <rect x="28" y="2"  width="5" height="40" rx="2" fill="#0F2540" />
+      <rect x="28" y="19" width="18" height="5"  rx="2" fill="#0F2540" />
+      <rect x="41" y="2"  width="5" height="40" rx="2" fill="#0F2540" />
+
+      {/* Overlap accent — shared amber dot where the two H meet */}
+      <rect x="19" y="19" width="9" height="5" rx="2" fill="#F59E0B" opacity="0.35" />
     </svg>
   );
 }
 
 export function LogoFull({ inverted = false }: { inverted?: boolean }) {
-  const forColor   = inverted ? "rgba(255,255,255,0.45)" : "#9CA3AF";
-  const byColor    = inverted ? "rgba(255,255,255,0.35)" : "#9CA3AF";
+  const forColor = inverted ? "rgba(255,255,255,0.45)" : "#9CA3AF";
+  const byColor  = inverted ? "rgba(255,255,255,0.35)" : "#9CA3AF";
 
   return (
     <div className="flex items-center gap-3">
       <Logo className="h-9 w-auto flex-shrink-0" />
       <div className="flex flex-col leading-none gap-[3px]">
-        {/* Wordmark */}
         <div className="flex items-baseline gap-[2px]">
-          <span className="text-[17px] font-black tracking-tight leading-none"
-            style={{ color: "#F59E0B" }}>
+          <span
+            className="text-[17px] font-black tracking-tight leading-none"
+            style={{ color: "#F59E0B" }}
+          >
             help
           </span>
-          <span className="text-[10px] font-light leading-none px-[3px]"
-            style={{ color: forColor }}>
+          <span
+            className="text-[10px] font-light leading-none px-[3px]"
+            style={{ color: forColor }}
+          >
             for
           </span>
-          <span className="text-[17px] font-black tracking-tight leading-none"
-            style={{ color: inverted ? "#FFFFFF" : "#0F2540" }}>
+          <span
+            className="text-[17px] font-black tracking-tight leading-none"
+            style={{ color: inverted ? "#FFFFFF" : "#0F2540" }}
+          >
             house
           </span>
         </div>
-        {/* Tagline */}
         <span
-          className="text-[8.5px] font-medium tracking-[0.18em] uppercase"
+          className="text-[8.5px] font-medium tracking-[0.18em] uppercase whitespace-nowrap"
           style={{ color: byColor }}
         >
           by Roccaro e Bertoni

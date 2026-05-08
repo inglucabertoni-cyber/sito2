@@ -142,32 +142,57 @@ export default function ChiSiamoPage() {
               Co-fondatore
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-[#0F2540] mb-1">Luca</h2>
-            <h3 className="text-xl font-semibold text-[#F59E0B] mb-6">Bertoni</h3>
+            <h3 className="text-xl font-semibold text-[#F59E0B] mb-2">Bertoni</h3>
+            <p className="text-sm font-semibold text-gray-400 mb-6 italic">
+              Porta la tecnologia dove gli altri si fermano.
+            </p>
 
             <div className="space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed">
               <p>
-                Luca è <strong className="text-[#0F2540]">innamorato della tecnologia</strong> — non quella
-                fine a sé stessa, ma quella che migliora concretamente la vita quotidiana.
-                La sua specializzazione è trasformare una casa in un sistema intelligente,
-                efficiente, pensato per durare nel tempo.
+                Luca è <strong className="text-[#0F2540]">innamorato della tecnologia</strong> — quella concreta,
+                applicata, che migliora davvero la vita di chi abita una casa.
+                Progetta sistemi di gestione degli impianti, modelli ottimizzati di climatizzazione
+                e soluzioni domotiche integrate: tutto quanto serve per rendere un immobile
+                <strong className="text-[#0F2540]"> adeguato ai tempi e alle esigenze di oggi</strong>.
               </p>
               <p>
-                Progetta e realizza <strong className="text-[#0F2540]">soluzioni ingegneristicamente avanzate</strong>:
-                sistemi di gestione degli impianti, modelli ottimizzati di climatizzazione,
-                automazione e domotica integrata. Tutto quanto oggi necessario per costruire
-                o ristrutturare una casa che sia davvero
-                <strong className="text-[#0F2540]"> adeguata ai tempi e alle esigenze</strong> di chi la vive.
-              </p>
-              <p>
-                La sua passione si estende ai <strong className="text-[#0F2540]">materiali e alla progettazione</strong>:
-                conosce le ultime innovazioni nel settore edilizio, sa scegliere le soluzioni
-                giuste per ogni contesto e guida i clienti nella scelta con competenza e visione d'insieme.
-              </p>
-              <p>
-                Per Luca, una casa non è mai solo un immobile: è un sistema da progettare,
-                ottimizzare e consegnare funzionante — dal primo sopralluogo all'ultimo collaudo.
+                La sua passione abbraccia anche i <strong className="text-[#0F2540]">materiali e la progettazione</strong>:
+                conosce le ultime innovazioni del settore edilizio e guida i clienti verso
+                scelte che durano nel tempo, esteticamente belle e tecnicamente solide.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Rete di professionisti */}
+      <section className="bg-[#0F2540] py-16 sm:py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-[#F59E0B] text-xs font-semibold tracking-widest uppercase mb-4">Il nostro network</p>
+            <h2 className="text-2xl sm:text-3xl font-black text-white mb-4 leading-tight">
+              Per ogni problema, il professionista giusto.
+            </h2>
+            <p className="text-white/55 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+              Giuliana e Luca coordinano un network selezionato di professionisti specializzati —
+              ciascuno coinvolto quando la situazione lo richiede, sempre sotto la nostra regia.
+              Non un tuttofare, ma il giusto esperto al momento giusto.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {[
+              { titolo: "Notai e avvocati", desc: "Per la tutela legale e la verifica degli atti" },
+              { titolo: "Geometri e architetti", desc: "Per rilievi, progetti e conformità urbanistica" },
+              { titolo: "Periti e stimatori", desc: "Per valutazioni tecniche certificate" },
+              { titolo: "Imprese edili", desc: "Per ristrutturazioni e cantieri selezionati" },
+              { titolo: "Esperti di impianti", desc: "Elettrici, idraulici, termotecnici" },
+              { titolo: "Interior designer", desc: "Per arredo, materiali e soluzioni d'interni" },
+            ].map((item) => (
+              <div key={item.titolo} className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-colors">
+                <p className="font-bold text-white text-sm mb-1">{item.titolo}</p>
+                <p className="text-white/45 text-xs leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

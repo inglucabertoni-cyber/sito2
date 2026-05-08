@@ -77,11 +77,22 @@ export default function ChiSiamoPage() {
           <div className="bg-amber-50 rounded-3xl p-8 sm:p-10 flex flex-col justify-between min-h-64">
             <div className="text-5xl font-black text-[#F59E0B] leading-none">20.000+</div>
             <p className="text-sm text-amber-800/70 font-medium mt-2">perizie redatte a Milano</p>
-            <div className="mt-8 border-t border-amber-200 pt-6">
+            <div className="mt-8 border-t border-amber-200 pt-6 space-y-4">
               <p className="text-xs text-amber-700/60 italic font-medium leading-relaxed">
                 "Ogni casa ha una storia. Il mio lavoro è raccontarla con onestà,
                 tutelandoti prima che tu firmi."
               </p>
+              <a
+                href="https://www.facebook.com/livesocialofficial/videos/giuliana-roccaro-ingegnere-gestionale-abilitata-allesercizio-della-professione-d/789018354942897/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs font-semibold text-amber-700 hover:text-amber-900 transition-colors"
+              >
+                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current flex-shrink-0">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+                Guarda l'intervista →
+              </a>
             </div>
           </div>
         </div>
@@ -99,7 +110,7 @@ export default function ChiSiamoPage() {
           <div className="bg-[#0F2540] rounded-3xl p-8 sm:p-10 flex flex-col justify-between min-h-64 order-last sm:order-first">
             <div className="text-5xl font-black text-white/20 leading-none">01</div>
             <div className="mt-8 border-t border-white/10 pt-6 space-y-3">
-              {["Domotica avanzata", "Climatizzazione ottimizzata", "Efficienza energetica", "Ingegneria degli impianti"].map((item) => (
+              {["Domotica avanzata", "Materiali e progettazione", "Climatizzazione ottimizzata", "Ingegneria degli impianti"].map((item) => (
                 <p key={item} className="text-xs text-white/50 font-medium flex items-center gap-2">
                   <span className="w-1 h-1 rounded-full bg-[#F59E0B] inline-block flex-shrink-0" />
                   {item}
@@ -128,6 +139,11 @@ export default function ChiSiamoPage() {
                 automazione e domotica integrata. Tutto quanto oggi necessario per costruire
                 o ristrutturare una casa che sia davvero
                 <strong className="text-[#0F2540]"> adeguata ai tempi e alle esigenze</strong> di chi la vive.
+              </p>
+              <p>
+                La sua passione si estende ai <strong className="text-[#0F2540]">materiali e alla progettazione</strong>:
+                conosce le ultime innovazioni nel settore edilizio, sa scegliere le soluzioni
+                giuste per ogni contesto e guida i clienti nella scelta con competenza e visione d'insieme.
               </p>
               <p>
                 Per Luca, una casa non è mai solo un immobile: è un sistema da progettare,

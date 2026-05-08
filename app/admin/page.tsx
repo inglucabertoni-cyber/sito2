@@ -63,10 +63,10 @@ export default async function AdminPage() {
             <p className="text-3xl font-bold text-orange-500">{appuntamentiInAttesa.length}</p>
             <p className="text-sm text-gray-600 mt-1">Da confermare</p>
           </div>
-          <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
+          <Link href="/admin/appuntamenti/storico" className="bg-white rounded-xl border border-gray-200 p-4 text-center hover:shadow-sm hover:border-green-300 transition-all block">
             <p className="text-3xl font-bold text-green-600">{appuntamentiEvasi.length}</p>
-            <p className="text-sm text-gray-600 mt-1">Evase</p>
-          </div>
+            <p className="text-sm text-gray-600 mt-1">Evase →</p>
+          </Link>
           <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
             <p className="text-3xl font-bold text-blue-600">{requests.length}</p>
             <p className="text-sm text-gray-600 mt-1">Pratiche totali</p>

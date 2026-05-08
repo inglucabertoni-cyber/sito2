@@ -1,9 +1,8 @@
 import { PrismaClient } from "../app/generated/prisma/client";
-import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
+import { PrismaPg } from "@prisma/adapter-pg";
 import bcrypt from "bcryptjs";
-import path from "path";
 
-const adapter = new PrismaBetterSqlite3({ url: path.resolve(process.cwd(), "dev.db") });
+const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL! });
 const prisma = new PrismaClient({ adapter });
 
 const SERVIZI = [
@@ -34,7 +33,6 @@ const SERVIZI = [
 ];
 
 async function main() {
-  // Admin
   const adminPassword = await bcrypt.hash("admin1234", 10);
   await prisma.user.upsert({
     where: { email: "admin@bertonirocaro.it" },
@@ -47,21 +45,6 @@ async function main() {
     },
   });
   console.log("Admin: admin@bertonirocaro.it / admin1234");
-
-  // Rimuovi vecchi dati di test nell'ordine corretto
-  const oldServices = await prisma.service.findMany({
-    where: { name: { in: ["Consulenza fiscale", "Ricorso al TAR", "Mediazione civile", "Visura catastale", "Certificato antimafia"] } },
-  });
-  if (oldServices.length > 0) {
-    const ids = oldServices.map((s) => s.id);
-    const oldRequests = await prisma.request.findMany({ where: { serviceId: { in: ids } } });
-    const reqIds = oldRequests.map((r) => r.id);
-    if (reqIds.length > 0) {
-      await prisma.statusUpdate.deleteMany({ where: { requestId: { in: reqIds } } });
-      await prisma.request.deleteMany({ where: { id: { in: reqIds } } });
-    }
-    await prisma.service.deleteMany({ where: { id: { in: ids } } });
-  }
 
   for (const s of SERVIZI) {
     const existing = await prisma.service.findFirst({ where: { name: s.name } });

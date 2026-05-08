@@ -212,9 +212,9 @@ export default async function HomePage() {
               {
                 tag: "Stai vendendo?",
                 icon: "📋",
-                titolo: "Vendi al suo reale valore, senza rischi post-rogito",
-                desc: "Un immobile con perizia indipendente, documenti in ordine e difformità risolte si vende meglio e più velocemente — e non torna indietro dopo la firma.",
-                punti: ["Perizia indipendente certificata", "Verifica e regolarizzazione documenti", "Valorizzazione per la vendita"],
+                titolo: "Vendi un bene sicuro, conforme e davvero vendibile",
+                desc: "Ti aiutiamo a vendere — ma prima ci assicuriamo che il tuo immobile sia in regola con la normativa nazionale e locale. Nessuna difformità nascosta, nessun blocco last-minute, nessun rischio dopo il rogito.",
+                punti: ["Verifica conformità urbanistica e catastale", "Regolarizzazione difformità e sanatorie", "Perizia indipendente al giusto valore"],
                 colore: "border-blue-100 hover:bg-blue-50/40",
               },
               {

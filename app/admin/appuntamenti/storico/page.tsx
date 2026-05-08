@@ -76,7 +76,7 @@ export default async function StoricoAppuntamentiPage() {
               address: a.address,
               confirmedDate: a.confirmedDate,
               status: a.status,
-            })} />
+            }))} />
           </div>
         )}
 

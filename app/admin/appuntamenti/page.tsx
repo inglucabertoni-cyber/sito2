@@ -80,7 +80,7 @@ export default async function AdminAppuntamentiPage() {
               address: a.address,
               confirmedDate: a.confirmedDate,
               status: a.status,
-            })} />
+            }))} />
           </div>
         )}
 

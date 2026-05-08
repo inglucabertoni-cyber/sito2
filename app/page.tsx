@@ -190,6 +190,34 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ── MANIFESTO ── */}
+      <section className="py-14 sm:py-16 px-4 sm:px-6 bg-[#F59E0B]">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-white/70 text-xs font-black tracking-widest uppercase mb-5">Come lavoriamo</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-tight mb-6">
+            A noi non basta mettere in contatto le parti<br className="hidden sm:block" /> per avere diritto a un compenso.
+          </h2>
+          <p className="text-white/85 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+            Qualsiasi intermediario può farlo. Noi lavoriamo in modo diverso:{" "}
+            <strong className="text-white">ci prendiamo la responsabilità di quello che facciamo</strong>.
+            Ogni analisi, ogni consiglio, ogni valutazione che ti diamo porta la nostra firma —
+            e quella firma conta.
+          </p>
+          <div className="grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+            {[
+              { titolo: "Firmiamo i nostri consigli", desc: "Ogni raccomandazione è documentata e motivata. Non ci nascondiamo dietro l'«è una mia impressione»." },
+              { titolo: "Non guadagniamo sul volume", desc: "Non abbiamo immobili da piazzare né imprese da favorire. Il nostro unico interesse è il tuo risultato." },
+              { titolo: "Scegliamo insieme", desc: "Non decidiamo al posto tuo — ti diamo tutti gli elementi per decidere con consapevolezza." },
+            ].map((item) => (
+              <div key={item.titolo} className="bg-white/15 border border-white/25 rounded-2xl p-5 text-left">
+                <p className="font-black text-white text-sm mb-2">{item.titolo}</p>
+                <p className="text-white/75 text-xs leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── PER CHI SEI ── */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-5xl mx-auto">

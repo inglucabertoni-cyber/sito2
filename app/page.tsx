@@ -208,7 +208,7 @@ export default async function HomePage() {
               { titolo: "Firmiamo i nostri consigli", desc: "Ogni raccomandazione è documentata e motivata. Non ci nascondiamo dietro l'«è una mia impressione»." },
               { titolo: "Non guadagniamo sul volume", desc: "Non abbiamo immobili da piazzare né imprese da favorire. Il nostro unico interesse è il tuo risultato." },
               { titolo: "Scegliamo insieme", desc: "Non decidiamo al posto tuo — ti diamo tutti gli elementi per decidere con consapevolezza." },
-              { titolo: "Gestiamo la sostenibilità finanziaria", desc: "Ti aiutiamo a capire se l'operazione è sostenibile — e a strutturare la richiesta di finanziamento alle banche nel modo più efficace." },
+              { titolo: "Gestiamo la sostenibilità finanziaria", desc: "Ti aiutiamo a capire se l'operazione regge — e costruiamo con te i fascicoli documentali per presentare la richiesta di finanziamento alle banche nel modo più solido ed efficace." },
             ].map((item) => (
               <div key={item.titolo} className="bg-white rounded-2xl p-5 text-left shadow-sm">
                 <p className="font-black text-[#0F2540] text-sm mb-2">{item.titolo}</p>

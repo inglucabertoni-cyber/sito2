@@ -82,17 +82,26 @@ export default function ChiSiamoPage() {
                 "Ogni casa ha una storia. Il mio lavoro è raccontarla con onestà,
                 tutelandoti prima che tu firmi."
               </p>
-              <a
-                href="https://www.facebook.com/livesocialofficial/videos/giuliana-roccaro-ingegnere-gestionale-abilitata-allesercizio-della-professione-d/789018354942897/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-semibold text-amber-700 hover:text-amber-900 transition-colors"
-              >
-                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current flex-shrink-0">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
-                Guarda l'intervista →
-              </a>
+              <div className="flex flex-col gap-2">
+                <a
+                  href="https://www.facebook.com/livesocialofficial/videos/giuliana-roccaro-ingegnere-gestionale-abilitata-allesercizio-della-professione-d/789018354942897/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-xs font-semibold text-amber-700 hover:text-amber-900 transition-colors"
+                >
+                  <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current flex-shrink-0"><path d="M8 5v14l11-7z"/></svg>
+                  Guarda l'intervista →
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/giuliana-roccaro-bertoni-00114060/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-xs font-semibold text-amber-700 hover:text-amber-900 transition-colors"
+                >
+                  <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current flex-shrink-0"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zm2-3a2 2 0 100-4 2 2 0 000 4z"/></svg>
+                  LinkedIn →
+                </a>
+              </div>
             </div>
           </div>
         </div>

@@ -159,8 +159,10 @@ export default async function HomePage() {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-white/65 max-w-2xl mx-auto mb-10 leading-relaxed px-2">
-            Conosciamo ogni dubbio, ogni rischio, ogni opportunità nascosta del mercato immobiliare.
-            Per questo possiamo guidarti dove altri non arrivano — e rendere reali i tuoi desideri.
+            Che tu stia <strong className="text-white/90">comprando</strong>,{" "}
+            <strong className="text-white/90">vendendo</strong> o{" "}
+            <strong className="text-white/90">ristrutturando</strong> — ti affianchiamo con competenza ingegneristica,
+            indipendenza totale e la responsabilità congiunta di ogni consiglio che ti diamo.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
@@ -185,6 +187,61 @@ export default async function HomePage() {
           <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
             <path d="M0 60V30C360 0 720 60 1080 30C1260 15 1380 25 1440 30V60H0Z" fill="white"/>
           </svg>
+        </div>
+      </section>
+
+      {/* ── PER CHI SEI ── */}
+      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-[#F59E0B] font-bold text-xs sm:text-sm tracking-widest uppercase mb-3">A chi ci rivolgiamo</p>
+            <h2 className="text-2xl sm:text-3xl font-black text-[#0F2540]">
+              Stai comprando, vendendo<br className="hidden sm:block" /> o ristrutturando?
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-3 gap-5">
+            {[
+              {
+                tag: "Stai comprando?",
+                icon: "🔑",
+                titolo: "Compra al giusto prezzo, senza brutte sorprese",
+                desc: "Verifichiamo ogni aspetto dell'immobile prima che tu firmi: valore di mercato, conformità urbanistica, vizi nascosti. Decidi con dati alla mano, non con l'emozione del momento.",
+                punti: ["Analisi comparativa di mercato", "Due diligence tecnica e catastale", "Tutela in trattativa"],
+                colore: "border-amber-200 hover:bg-amber-50",
+              },
+              {
+                tag: "Stai vendendo?",
+                icon: "📋",
+                titolo: "Vendi al suo reale valore, senza rischi post-rogito",
+                desc: "Un immobile con perizia indipendente, documenti in ordine e difformità risolte si vende meglio e più velocemente — e non torna indietro dopo la firma.",
+                punti: ["Perizia indipendente certificata", "Verifica e regolarizzazione documenti", "Valorizzazione per la vendita"],
+                colore: "border-blue-100 hover:bg-blue-50/40",
+              },
+              {
+                tag: "Stai ristrutturando?",
+                icon: "🏗️",
+                titolo: "Un progetto integrato, non pezzi separati",
+                desc: "Progettiamo, selezioniamo le imprese e coordiniamo ogni fase. Domotica, impianti, materiali, layout — tutto coordinato per massimizzare comfort, fruibilità e valore.",
+                punti: ["Progettazione e capitolato", "Selezione e gestione imprese", "Direzione lavori e collaudo"],
+                colore: "border-green-100 hover:bg-green-50/40",
+              },
+            ].map((c) => (
+              <div key={c.tag} className={`rounded-2xl border-2 p-6 transition-colors ${c.colore}`}>
+                <div className="text-2xl mb-3">{c.icon}</div>
+                <p className="text-[10px] font-black tracking-widest uppercase text-[#F59E0B] mb-2">{c.tag}</p>
+                <h3 className="font-black text-[#0F2540] text-base sm:text-lg leading-snug mb-3">{c.titolo}</h3>
+                <p className="text-xs sm:text-sm text-gray-500 leading-relaxed mb-4">{c.desc}</p>
+                <ul className="space-y-1.5">
+                  {c.punti.map((p) => (
+                    <li key={p} className="flex items-center gap-2 text-xs text-gray-500">
+                      <span className="w-1 h-1 rounded-full bg-[#F59E0B] flex-shrink-0" />
+                      {p}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -233,7 +290,7 @@ export default async function HomePage() {
               Ogni servizio è un passo<br className="hidden sm:block" /> verso il tuo obiettivo
             </h2>
             <p className="text-gray-500 mt-4 max-w-xl mx-auto text-sm sm:text-base">
-              Quattro fasi integrate per accompagnarti in ogni aspetto dell&apos;acquisto e della realizzazione.
+              Dalla valutazione all&apos;acquisto, dalla vendita alla ristrutturazione — quattro servizi integrati per ogni fase della vita di una casa.
             </p>
           </div>
 

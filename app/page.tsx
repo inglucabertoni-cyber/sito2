@@ -178,19 +178,6 @@ export default async function HomePage() {
             </a>
           </div>
 
-          {/* Stats */}
-          <div className="mt-16 sm:mt-20 grid grid-cols-3 gap-4 sm:gap-8 max-w-xl mx-auto border-t border-white/10 pt-8 sm:pt-10">
-            {[
-              { valore: "2", label: "Ingegneri dedicati" },
-              { valore: "4", label: "Servizi integrati" },
-              { valore: "0%", label: "Conflitti d'interesse" },
-            ].map((s) => (
-              <div key={s.label} className="text-center">
-                <div className="text-2xl sm:text-3xl font-black text-[#F59E0B]">{s.valore}</div>
-                <div className="text-[10px] sm:text-xs text-white/50 mt-1 leading-tight">{s.label}</div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Wave */}

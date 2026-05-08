@@ -462,7 +462,7 @@ export default async function HomePage() {
 
       {/* ── FOOTER ── */}
       <footer className="bg-[#08172B] text-white/40 py-6 sm:py-8 px-4 sm:px-6 text-center text-xs sm:text-sm">
-        <p>© {new Date().getFullYear()} help for house by Roccaro e Bertoni. Tutti i diritti riservati.</p>
+        <p>© {new Date().getFullYear()} help for home by Roccaro e Bertoni. Tutti i diritti riservati.</p>
       </footer>
     </div>
   );

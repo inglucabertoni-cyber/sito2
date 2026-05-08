@@ -2,7 +2,7 @@ import Link from "next/link";
 import { LogoFull } from "@/app/components/Logo";
 
 export const metadata = {
-  title: "Chi siamo — help for house",
+  title: "Chi siamo — help for home",
   description: "Giuliana Roccaro e Luca Bertoni: ingegneri gestionali, appassionati di case e tecnologia.",
 };
 
@@ -55,7 +55,7 @@ export default function ChiSiamoPage() {
 
             <div className="space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed">
               <p>
-                Giuliana è la mente e il cuore di <strong className="text-[#0F2540]">help for house</strong>.
+                Giuliana è la mente e il cuore di <strong className="text-[#0F2540]">help for home</strong>.
                 È lei che accoglie ogni cliente, ascolta le esigenze, costruisce la strategia
                 e coordina tutte le fasi del progetto — garantendo continuità, coerenza e attenzione
                 in ogni passaggio.
@@ -180,7 +180,7 @@ export default function ChiSiamoPage() {
               Un team di oltre 20 ingegneri e specialisti<br className="hidden sm:block" /> al tuo servizio.
             </h2>
             <p className="text-white/55 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-6">
-              <strong className="text-white/80">help for house</strong> non è uno studio singolo — è un ecosistema
+              <strong className="text-white/80">help for home</strong> non è uno studio singolo — è un ecosistema
               di professionisti selezionati, coordinati da Giuliana e Luca, ciascuno coinvolto
               nel momento esatto in cui la situazione lo richiede.
             </p>
@@ -209,7 +209,7 @@ export default function ChiSiamoPage() {
         </div>
       </section>
 
-      {/* Perché scegliere help for house */}
+      {/* Perché scegliere help for home */}
       <section className="bg-white py-16 sm:py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -218,7 +218,7 @@ export default function ChiSiamoPage() {
               Vendere o comprare con serenità,<br className="hidden sm:block" /> al giusto prezzo. Senza brutte sorprese.
             </h2>
             <p className="text-gray-500 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-              <strong className="text-[#0F2540]">help for house</strong> nasce per questo: accompagnarti in uno dei
+              <strong className="text-[#0F2540]">help for home</strong> nasce per questo: accompagnarti in uno dei
               passi più importanti della tua vita con la certezza di avere al fianco chi conosce ogni rischio
               e sa come evitarlo.
             </p>
@@ -337,7 +337,7 @@ export default function ChiSiamoPage() {
       </section>
 
       <footer className="bg-[#08172B] text-white/40 py-6 px-4 text-center text-xs">
-        <p>© {new Date().getFullYear()} help for house by Roccaro e Bertoni. Tutti i diritti riservati.</p>
+        <p>© {new Date().getFullYear()} help for home by Roccaro e Bertoni. Tutti i diritti riservati.</p>
       </footer>
     </div>
   );

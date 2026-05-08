@@ -5,7 +5,7 @@ export default function Logo({ className = "", inverted = false }: { className?:
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 52 44"
       className={className}
-      aria-label="help for house"
+      aria-label="help for home"
     >
       {/* H amber — help */}
       <rect x="2"  y="2"  width="5" height="40" rx="2" fill="#F59E0B" />
@@ -48,7 +48,7 @@ export function LogoFull({ inverted = false }: { inverted?: boolean }) {
             className="text-[17px] font-black tracking-tight leading-none"
             style={{ color: inverted ? "#FFFFFF" : "#0F2540" }}
           >
-            house
+            home
           </span>
         </div>
         <span

@@ -259,6 +259,53 @@ export default function ChiSiamoPage() {
         </div>
       </section>
 
+      {/* Ristrutturazioni integrate */}
+      <section className="bg-amber-50 py-16 sm:py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid sm:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-[#F59E0B] text-xs font-semibold tracking-widest uppercase mb-4">Ristrutturazioni</p>
+              <h2 className="text-2xl sm:text-3xl font-black text-[#0F2540] mb-6 leading-tight">
+                Non pezzi separati.<br />
+                <span className="text-[#F59E0B]">Un progetto unico, integrato.</span>
+              </h2>
+              <div className="space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed">
+                <p>
+                  Oggi le ristrutturazioni vengono gestite a pezzi disgiunti: un'impresa per i muri,
+                  un altro per gli impianti, un altro ancora per l'arredo. Il risultato è spesso
+                  <strong className="text-[#0F2540]"> frammentato, inefficiente e costoso</strong>.
+                </p>
+                <p>
+                  Noi facciamo diversamente. <strong className="text-[#0F2540]">Mettiamo insieme tutte le parti</strong>
+                  {" "}e le integriamo in un progetto coerente, pensato per raggiungere obiettivi precisi:
+                  elevati livelli di comfort, massima fruibilità degli spazi e servizi intelligenti
+                  che <strong className="text-[#0F2540]">rendono massimo il valore dell'appartamento</strong>.
+                </p>
+                <p>
+                  Che si tratti di domotica, climatizzazione, materiali o layout degli spazi,
+                  ogni scelta è coordinata per restituirti un ambiente che vale più di quanto hai investito.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                { icon: "🌡️", titolo: "Comfort elevato", desc: "Climatizzazione ottimizzata, isolamento acustico e termico di ultima generazione." },
+                { icon: "🏠", titolo: "Fruibilità massima", desc: "Spazi pensati per chi ci vive: layout, luce, flussi. Tutto ha senso." },
+                { icon: "📡", titolo: "Domotica integrata", desc: "Impianti intelligenti, connettività, automazione — senza compromessi." },
+                { icon: "📈", titolo: "Valore aumentato", desc: "Un appartamento ben ristrutturato in modo integrato vale significativamente di più." },
+              ].map((item) => (
+                <div key={item.titolo} className="bg-white rounded-2xl p-4 border border-amber-100 shadow-sm">
+                  <div className="text-xl mb-2">{item.icon}</div>
+                  <p className="font-bold text-[#0F2540] text-xs mb-1">{item.titolo}</p>
+                  <p className="text-[11px] text-gray-500 leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Missione */}
       <section className="bg-gray-50 py-16 sm:py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">

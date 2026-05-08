@@ -55,10 +55,10 @@ export default async function AdminPage() {
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Pannello Admin</h2>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
-          <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
+          <Link href="/admin/appuntamenti" className="bg-white rounded-xl border border-gray-200 p-4 text-center hover:shadow-sm hover:border-blue-300 transition-all block">
             <p className="text-3xl font-bold text-blue-600">{appuntamenti.length}</p>
-            <p className="text-sm text-gray-600 mt-1">Consulenze totali</p>
-          </div>
+            <p className="text-sm text-gray-600 mt-1">Consulenze totali →</p>
+          </Link>
           <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
             <p className="text-3xl font-bold text-orange-500">{appuntamentiInAttesa.length}</p>
             <p className="text-sm text-gray-600 mt-1">Da confermare</p>

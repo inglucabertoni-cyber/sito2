@@ -28,7 +28,7 @@ export async function bookAppointment(formData: FormData) {
 
   const result = BookSchema.safeParse(raw);
   if (!result.success) {
-    const msg = result.error.errors.map((e) => e.message).join(", ");
+    const msg = result.error.issues.map((e) => e.message).join(", ");
     throw new Error(msg);
   }
 

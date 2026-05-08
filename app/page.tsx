@@ -195,9 +195,18 @@ export default async function HomePage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-[#F59E0B] font-bold text-xs sm:text-sm tracking-widest uppercase mb-3">A chi ci rivolgiamo</p>
-            <h2 className="text-2xl sm:text-3xl font-black text-[#0F2540]">
+            <h2 className="text-2xl sm:text-3xl font-black text-[#0F2540] mb-5">
               Stai comprando, vendendo<br className="hidden sm:block" /> o ristrutturando?
             </h2>
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-8 max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base text-gray-600">
+                <strong className="text-[#0F2540]">Abbiamo la credibilità</strong> per consigliare chi compra.
+              </p>
+              <span className="hidden sm:block text-gray-300">|</span>
+              <p className="text-sm sm:text-base text-gray-600">
+                <strong className="text-[#0F2540]">Abbiamo la capacità</strong> per consigliare chi vende.
+              </p>
+            </div>
           </div>
           <div className="grid sm:grid-cols-3 gap-5">
             {[

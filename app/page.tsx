@@ -203,11 +203,12 @@ export default async function HomePage() {
             Ogni analisi, ogni consiglio, ogni valutazione che ti diamo porta la nostra firma —
             e quella firma conta.
           </p>
-          <div className="grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {[
               { titolo: "Firmiamo i nostri consigli", desc: "Ogni raccomandazione è documentata e motivata. Non ci nascondiamo dietro l'«è una mia impressione»." },
               { titolo: "Non guadagniamo sul volume", desc: "Non abbiamo immobili da piazzare né imprese da favorire. Il nostro unico interesse è il tuo risultato." },
               { titolo: "Scegliamo insieme", desc: "Non decidiamo al posto tuo — ti diamo tutti gli elementi per decidere con consapevolezza." },
+              { titolo: "Gestiamo la sostenibilità finanziaria", desc: "Ti aiutiamo a capire se l'operazione è sostenibile: costi reali, rischi nascosti, margini di manovra." },
             ].map((item) => (
               <div key={item.titolo} className="bg-white/15 border border-white/25 rounded-2xl p-5 text-left">
                 <p className="font-black text-white text-sm mb-2">{item.titolo}</p>

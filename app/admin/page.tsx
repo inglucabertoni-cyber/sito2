@@ -8,14 +8,17 @@ import { LogoFull } from "@/app/components/Logo";
 
 export default async function AdminPage() {
   const session = await auth();
-  const requests = await prisma.request.findMany({
-    include: {
-      client: true,
-      service: true,
-      statusUpdates: { orderBy: { createdAt: "desc" }, take: 1 },
-    },
-    orderBy: { createdAt: "desc" },
-  });
+  const [requests, appuntamenti] = await Promise.all([
+    prisma.request.findMany({
+      include: {
+        client: true,
+        service: true,
+        statusUpdates: { orderBy: { createdAt: "desc" }, take: 1 },
+      },
+      orderBy: { createdAt: "desc" },
+    }),
+    prisma.appointment.findMany(),
+  ]);
 
   const aperte = requests.filter((r) => {
     const s = r.statusUpdates[0]?.status;
@@ -25,6 +28,8 @@ export default async function AdminPage() {
     const s = r.statusUpdates[0]?.status;
     return s === "RISPOSTA_FORNITA" || s === "RIFIUTATA";
   });
+  const appuntamentiInAttesa = appuntamenti.filter((a) => a.status === "RICHIESTA");
+  const appuntamentiEvasi = appuntamenti.filter((a) => a.status !== "RICHIESTA");
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -49,10 +54,22 @@ export default async function AdminPage() {
       <main className="max-w-5xl mx-auto px-4 py-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Pannello Admin</h2>
 
-        <div className="grid grid-cols-3 gap-4 mb-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
+          <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
+            <p className="text-3xl font-bold text-blue-600">{appuntamenti.length}</p>
+            <p className="text-sm text-gray-600 mt-1">Consulenze totali</p>
+          </div>
+          <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
+            <p className="text-3xl font-bold text-orange-500">{appuntamentiInAttesa.length}</p>
+            <p className="text-sm text-gray-600 mt-1">Da confermare</p>
+          </div>
+          <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
+            <p className="text-3xl font-bold text-green-600">{appuntamentiEvasi.length}</p>
+            <p className="text-sm text-gray-600 mt-1">Evase</p>
+          </div>
           <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
             <p className="text-3xl font-bold text-blue-600">{requests.length}</p>
-            <p className="text-sm text-gray-600 mt-1">Richieste totali</p>
+            <p className="text-sm text-gray-600 mt-1">Pratiche totali</p>
           </div>
           <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
             <p className="text-3xl font-bold text-orange-500">{aperte.length}</p>

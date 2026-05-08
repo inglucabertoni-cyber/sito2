@@ -1,4 +1,5 @@
-export default function Logo({ className = "" }: { className?: string }) {
+export default function Logo({ className = "", inverted = false }: { className?: string; inverted?: boolean }) {
+  const houseColor = inverted ? "#FFFFFF" : "#0F2540";
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -11,12 +12,12 @@ export default function Logo({ className = "" }: { className?: string }) {
       <rect x="2"  y="19" width="18" height="5"  rx="2" fill="#F59E0B" />
       <rect x="15" y="2"  width="5" height="40" rx="2" fill="#F59E0B" />
 
-      {/* H navy — house (shifted right, slightly overlapping) */}
-      <rect x="28" y="2"  width="5" height="40" rx="2" fill="#0F2540" />
-      <rect x="28" y="19" width="18" height="5"  rx="2" fill="#0F2540" />
-      <rect x="41" y="2"  width="5" height="40" rx="2" fill="#0F2540" />
+      {/* H navy/white — house */}
+      <rect x="28" y="2"  width="5" height="40" rx="2" fill={houseColor} />
+      <rect x="28" y="19" width="18" height="5"  rx="2" fill={houseColor} />
+      <rect x="41" y="2"  width="5" height="40" rx="2" fill={houseColor} />
 
-      {/* Overlap accent — shared amber dot where the two H meet */}
+      {/* Overlap accent */}
       <rect x="19" y="19" width="9" height="5" rx="2" fill="#F59E0B" opacity="0.35" />
     </svg>
   );
@@ -28,7 +29,7 @@ export function LogoFull({ inverted = false }: { inverted?: boolean }) {
 
   return (
     <div className="flex items-center gap-3">
-      <Logo className="h-9 w-auto flex-shrink-0" />
+      <Logo className="h-9 w-auto flex-shrink-0" inverted={inverted} />
       <div className="flex flex-col leading-none gap-[3px]">
         <div className="flex items-baseline gap-[2px]">
           <span

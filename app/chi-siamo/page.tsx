@@ -169,14 +169,20 @@ export default function ChiSiamoPage() {
       <section className="bg-[#0F2540] py-16 sm:py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10">
-            <p className="text-[#F59E0B] text-xs font-semibold tracking-widest uppercase mb-4">Il nostro network</p>
+            <p className="text-[#F59E0B] text-xs font-semibold tracking-widest uppercase mb-4">Il lavoro di squadra</p>
             <h2 className="text-2xl sm:text-3xl font-black text-white mb-4 leading-tight">
-              Per ogni problema, il professionista giusto.
+              Un mondo di competenze al servizio del cliente.
             </h2>
+            <p className="text-white/55 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-6">
+              Il lavoro di squadra è essenziale. <strong className="text-white/80">help for house</strong> non è
+              uno studio singolo — è un ecosistema di professionisti selezionati, coordinati da Giuliana,
+              ciascuno coinvolto quando la situazione lo richiede.
+            </p>
             <p className="text-white/55 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-              Giuliana e Luca coordinano un network selezionato di professionisti specializzati —
-              ciascuno coinvolto quando la situazione lo richiede, sempre sotto la nostra regia.
-              Non un tuttofare, ma il giusto esperto al momento giusto.
+              Il risultato è un servizio <strong className="text-white/80">profondamente personalizzato</strong>
+              — cucito sulle esigenze di ogni singolo cliente — ma sempre
+              <strong className="text-white/80"> allineato al meglio che il mercato può offrire</strong>.
+              Non un compromesso, ma l'eccellenza accessibile.
             </p>
           </div>
           <div className="grid sm:grid-cols-3 gap-4">

@@ -106,6 +106,7 @@ export default async function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between">
           <LogoFull inverted />
           <nav className="flex items-center gap-1 sm:gap-2">
+            <Link href="/chi-siamo" className="hidden sm:block text-sm text-white/70 hover:text-white px-3 py-2">Chi siamo</Link>
             {session ? (
               <>
                 <Link href={role === "ADMIN" ? "/admin" : "/dashboard"} className="text-sm text-white/80 hover:text-white px-2 sm:px-3 py-2">

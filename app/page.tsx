@@ -169,7 +169,7 @@ export default async function HomePage() {
 
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-black leading-[1.1] mb-6 tracking-tight">
             Prima ancora di essere<br className="hidden sm:block" /> consulenti,{" "}
-            <span className="text-[#F59E0B]">siamo diventati clienti.</span>
+            <span className="text-[#F59E0B]">siamo stati e continuiamo ad essere clienti.</span>
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-white/65 max-w-2xl mx-auto mb-10 leading-relaxed px-2">

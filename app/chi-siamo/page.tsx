@@ -3,7 +3,7 @@ import { LogoFull } from "@/app/components/Logo";
 
 export const metadata = {
   title: "Chi siamo — help for home",
-  description: "Giuliana Roccaro e Luca Bertoni: ingegneri gestionali, appassionati di case e tecnologia.",
+  description: "Giuliana Roccaro: ingegnere gestionale, CTU del Tribunale di Milano, oltre 20.000 perizie. Il team di help for home al tuo fianco.",
 };
 
 export default function ChiSiamoPage() {
@@ -24,7 +24,7 @@ export default function ChiSiamoPage() {
           <p className="text-[#F59E0B] text-xs font-semibold tracking-widest uppercase mb-4">Chi siamo</p>
           <h1 className="text-3xl sm:text-5xl font-black leading-tight mb-6">
             Prima ancora di essere consulenti,<br />
-            <span className="text-[#F59E0B]">siamo diventati clienti.</span>
+            <span className="text-[#F59E0B]">siamo stati e continuiamo ad essere clienti.</span>
           </h1>
           <p className="text-white/65 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
             Abbiamo vissuto sulla nostra pelle ogni dubbio, ogni trattativa, ogni sorpresa nascosta
@@ -50,7 +50,7 @@ export default function ChiSiamoPage() {
             <h3 className="text-xl font-semibold text-[#F59E0B] mb-2">Roccaro</h3>
             <p className="text-sm font-semibold text-gray-400 mb-6 italic">
               Guida e coordina ogni progetto — dal primo contatto alla consegna finale.
-              Insieme a Luca, è alla testa di un team di oltre <strong className="text-gray-500">20 ingegneri e specialisti</strong>.
+              È alla testa di un team di oltre <strong className="text-gray-500">20 ingegneri e specialisti</strong>.
             </p>
 
             <div className="space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed">
@@ -122,55 +122,6 @@ export default function ChiSiamoPage() {
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="max-w-4xl mx-auto px-4">
-        <div className="border-t border-gray-100" />
-      </div>
-
-      {/* Luca */}
-      <section className="max-w-4xl mx-auto px-4 py-16 sm:py-20">
-        <div className="grid sm:grid-cols-2 gap-12 items-start">
-          {/* Decorative card */}
-          <div className="bg-[#0F2540] rounded-3xl p-8 sm:p-10 flex flex-col justify-between min-h-64 order-last sm:order-first">
-            <div className="text-5xl font-black text-white/20 leading-none">01</div>
-            <div className="mt-8 border-t border-white/10 pt-6 space-y-3">
-              {["Domotica avanzata", "Materiali e progettazione", "Climatizzazione ottimizzata", "Ingegneria degli impianti"].map((item) => (
-                <p key={item} className="text-xs text-white/50 font-medium flex items-center gap-2">
-                  <span className="w-1 h-1 rounded-full bg-[#F59E0B] inline-block flex-shrink-0" />
-                  {item}
-                </p>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <div className="inline-block bg-blue-50 border border-blue-100 text-blue-700 text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4">
-              Co-fondatore
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#0F2540] mb-1">Luca</h2>
-            <h3 className="text-xl font-semibold text-[#F59E0B] mb-2">Bertoni</h3>
-            <p className="text-sm font-semibold text-gray-400 mb-6 italic">
-              Porta la tecnologia dove gli altri si fermano — e coordina la componente tecnica del team.
-            </p>
-
-            <div className="space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed">
-              <p>
-                Luca è <strong className="text-[#0F2540]">innamorato della tecnologia</strong> — quella concreta,
-                applicata, che migliora davvero la vita di chi abita una casa.
-                Progetta sistemi di gestione degli impianti, modelli ottimizzati di climatizzazione
-                e soluzioni domotiche integrate: tutto quanto serve per rendere un immobile
-                <strong className="text-[#0F2540]"> adeguato ai tempi e alle esigenze di oggi</strong>.
-              </p>
-              <p>
-                La sua passione abbraccia anche i <strong className="text-[#0F2540]">materiali e la progettazione</strong>:
-                conosce le ultime innovazioni del settore edilizio e guida i clienti verso
-                scelte che durano nel tempo, esteticamente belle e tecnicamente solide.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Rete di professionisti */}
       <section className="bg-[#0F2540] py-16 sm:py-20 px-4">
         <div className="max-w-4xl mx-auto">
@@ -181,7 +132,7 @@ export default function ChiSiamoPage() {
             </h2>
             <p className="text-white/55 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-6">
               <strong className="text-white/80">help for home</strong> non è uno studio singolo — è un ecosistema
-              di professionisti selezionati, coordinati da Giuliana e Luca, ciascuno coinvolto
+              di professionisti selezionati, coordinati da Giuliana, ciascuno coinvolto
               nel momento esatto in cui la situazione lo richiede.
             </p>
             <p className="text-white/55 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">

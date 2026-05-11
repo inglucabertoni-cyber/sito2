@@ -2,6 +2,20 @@ import { auth } from "@/auth";
 import Link from "next/link";
 import { LogoFull } from "./components/Logo";
 import { logout } from "./actions/auth";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "help for home — Consulenza immobiliare a Milano",
+  description:
+    "Compra, vendi o ristruttura casa a Milano con esperti indipendenti al tuo fianco. Perizie, due diligence tecnica, valutazioni e ristrutturazioni integrate. Oltre 20.000 perizie. CTU Tribunale di Milano.",
+  alternates: { canonical: "https://www.helpforhome.it" },
+  openGraph: {
+    title: "help for home — Consulenza immobiliare a Milano",
+    description:
+      "Esperti indipendenti per comprare, vendere e ristrutturare casa a Milano. Nessun conflitto d'interesse. Oltre 20.000 perizie.",
+    url: "https://www.helpforhome.it",
+  },
+};
 
 const SERVIZI = [
   {

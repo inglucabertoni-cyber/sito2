@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { STATO_COLOR, STATO_LABEL } from "@/lib/constants";
 import Link from "next/link";
 import { logout } from "@/app/actions/auth";
+import { cancelAppointmentByClient } from "@/app/actions/appointments";
 import { redirect } from "next/navigation";
 import { LogoFull } from "@/app/components/Logo";
 
@@ -124,7 +125,20 @@ export default async function DashboardPage({
                         <p className="text-xs text-gray-600 mt-1">{a.confirmedNotes}</p>
                       )}
                     </div>
-                    <p className="text-xs text-gray-400">{new Date(a.createdAt).toLocaleDateString("it-IT")}</p>
+                    <div className="flex flex-col items-end gap-2">
+                      <p className="text-xs text-gray-400">{new Date(a.createdAt).toLocaleDateString("it-IT")}</p>
+                      {a.status !== "ANNULLATO" && (
+                        <form action={cancelAppointmentByClient}>
+                          <input type="hidden" name="id" value={a.id} />
+                          <button
+                            type="submit"
+                            className="text-xs text-red-400 hover:text-red-600 transition-colors underline underline-offset-2"
+                          >
+                            Annulla
+                          </button>
+                        </form>
+                      )}
+                    </div>
                   </div>
                 </div>
               ))}

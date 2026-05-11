@@ -80,3 +80,16 @@ export async function cancelAppointment(formData: FormData) {
 
   revalidatePath("/admin/appuntamenti");
 }
+
+export async function cancelAppointmentByClient(formData: FormData) {
+  const session = await auth();
+  if (!session?.user) redirect("/login");
+
+  const id = formData.get("id") as string;
+  await prisma.appointment.update({
+    where: { id, clientId: session.user.id! },
+    data: { status: "ANNULLATO" },
+  });
+
+  revalidatePath("/dashboard");
+}

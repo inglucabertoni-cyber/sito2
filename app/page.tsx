@@ -416,14 +416,13 @@ export default async function HomePage() {
           <div>
             <p className="text-[#F59E0B] font-bold text-xs tracking-widest uppercase mb-4">Chi siamo</p>
             <h2 className="text-2xl sm:text-3xl font-black text-white mb-4 leading-tight">
-              Giuliana Roccaro e Luca Bertoni.<br />
-              <span className="text-[#F59E0B]">Ingegneri gestionali. Dalla tua parte.</span>
+              Giuliana Roccaro.<br />
+              <span className="text-[#F59E0B]">Ingegnere gestionale. Dalla tua parte.</span>
             </h2>
             <p className="text-white/60 text-sm sm:text-base leading-relaxed">
               Giuliana guida e coordina ogni progetto: oltre 20 anni nel mercato milanese,
               20.000+ perizie, CTU nominata dal Tribunale di Milano.
-              Luca porta la visione tecnica e tecnologica.
-              Insieme guidano un team di oltre 20 ingegneri e specialisti.
+              Alla testa di un team di oltre 20 ingegneri e specialisti.
             </p>
           </div>
           <div className="flex flex-col gap-4">

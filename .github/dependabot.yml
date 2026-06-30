@@ -8,9 +8,6 @@ updates:
       time: "09:00"
       timezone: "Europe/Rome"
     open-pull-requests-limit: 5
-    labels:
-      - "dependencies"
-      - "security"
     ignore:
       # Ignora major versions per evitare breaking changes automatici
       - dependency-name: "*"
